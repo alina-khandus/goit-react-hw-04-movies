@@ -1,12 +1,14 @@
+// import axios from 'axios';
+
 const BASEURL = 'https://api.themoviedb.org';
 const KEY = 'a07c11403afd75e3efa98b4898aec563';
 
-const fetchShowMoviesDetails = (movieId) => {
+const fetchShowMoviesDetails = movieId => {
   return fetch(`${BASEURL}/3/movie/${movieId}?api_key=${KEY}&language=en-US`)
     .then(response => response.json());
 };
 
-const fetchMovieWithQuery = (searchQuery) => {
+const fetchMovieWithQuery = searchQuery => {
   return fetch(`${BASEURL}/3/search/movie?api_key=${KEY}&query=${searchQuery}&language=en-US&page=1&include_adult=false`)
     .then(response => response.json())
 }
@@ -33,5 +35,3 @@ export default {
   fetchtCastMovie,
   fetchtReviewsMovie
 };
-
-

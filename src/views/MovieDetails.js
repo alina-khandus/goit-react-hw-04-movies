@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moviesApi from '../services/movies-api';
 import Cast from '../views/Cast';
-import routes from 'routes';
+import routes from '../routes';
 import { Link, Route } from 'react-router-dom';
 import Reviews from '../views/Reviews';
 import Loader from "react-loader-spinner";
